@@ -1,3 +1,6 @@
+> [!WARNING]
+> Urgent: You must be (or know) a dunce to read this.
+
 # Dunce's Theorem
 
 ## Overview
@@ -14,7 +17,7 @@ In any classroom of students, if one student is wearing a dunce cap, then the av
 - **Dunce Cap (D)**: A symbolic representation of a student whose intelligence is significantly lower than the average of the group.
 - **Classroom Size (n)**: The total number of students in the classroom.
 - **Radius of the Dunce Cap (r)**: A measure of the size of the dunce cap, which humorously affects the "dunce effect."
-- **Size of the Dunce Cap (S_d)**: The volume or area of the dunce cap, calculated as \( S_d = \pi r^2 \) (assuming a conical shape for simplicity).
+- **Size of the Dunce Cap (S_d)**: The volume or area of the dunce cap, calculated as $ S_d = \pi r^2 $ (assuming a conical shape for simplicity).
 
 ## Theorem Formulation
 
@@ -26,23 +29,23 @@ Let:
 
 The new average intelligence $ I' $ when one student wears a dunce cap is given by:
 
-\[ I' = \frac{(n-1)I + D}{n} \]
+$$I' = \frac{(n-1)I + D}{n}$$
 
 ### Incorporating the Size of the Dunce Cap
 
 The size of the dunce cap can be humorously linked to the impact it has on the average intelligence. We introduce a factor $ f(r) $ that represents the influence of the radius of the dunce cap on the average intelligence:
 
-\[ f(r) = k \cdot r^2 \]
+$$f(r) = k \cdot r^2$$
 
 The revised average intelligence can now be expressed as:
 
-\[ I' = I - f(r) \cdot n^2 \]
+$$I' = I - f(r) \cdot n^2$$
 
 ### Series to Infinity
 
 To explore the cumulative effect of multiple dunce caps as the classroom size approaches infinity, we define a series $ S $:
 
-\[ S = \sum_{n=1}^{\infty} \left( k \cdot r^2 \cdot n^2 \right) \]
+$$S = \sum_{n=1}^{\infty} \left( k \cdot r^2 \cdot n^2 \right)$$
 
 This series diverges, indicating that as the classroom size increases indefinitely, the cumulative effect of the dunce caps leads to an infinite decrease in average intelligence.
 
