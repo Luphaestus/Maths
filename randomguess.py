@@ -2,15 +2,17 @@ import random
 import sys
 import subprocess
 
-
-
-
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package, "--trusted-host", "pypi.org", "--trusted-host", "files.pythonhosted.org"])
 def plot_ratio():
-
+    import matplotlib.pyplot as plt
+    import tqdm
+    totals = list(range(1, 100000, 1000))
     ratios = []
-    for total in tqdm.tqdm(range(1, 1000000, 10000)):
+    max = 10000000000000000
+
+    for total in tqdm.tqdm(totals):
         correct = 0
-        max = 10000000000000000
 
         for i in range(total):
             num1 = random.randint(0, max)
@@ -55,7 +57,6 @@ def main():
     if choice == 'yes':
         try:
             import matplotlib.pyplot as plt
-                import tqdm
         except ImportError:
             print("Required packages not found. Installing...")
             install('matplotlib')
@@ -70,7 +71,7 @@ def main():
 
 def main_simulation():
     correct = 0
-    total = 1000000
+    total = 100
     max = 10000000000000000
 
     for i in range(total):
