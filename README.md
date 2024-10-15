@@ -17,7 +17,11 @@ In any classroom of students, if one student is wearing a dunce cap, then the av
 - **Dunce Cap (D)**: A symbolic representation of a student whose intelligence is significantly lower than the average of the group.
 - **Classroom Size (n)**: The total number of students in the classroom.
 - **Radius of the Dunce Cap (r)**: A measure of the size of the dunce cap, which humorously affects the "dunce effect."
-- **Size of the Dunce Cap (S_d)**: The volume of the dunce cap, calculated as $ S_d = \frac{1}{3} \pi r^2 h $ (assuming a conical shape for simplicity).
+- **Size of the Dunce Cap (S_d)**: The volume of the dunce cap, calculated as 
+
+$$ S_d = \frac{1}{3} \pi r^2 h $$ 
+
+(assuming a conical shape for simplicity).
 
 ## Theorem Formulation
 
