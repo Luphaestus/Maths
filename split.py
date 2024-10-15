@@ -1,12 +1,21 @@
-from tqdm import tqdm
+import random
+import sys
+import subprocess
 
-import matplotlib.pyplot as plt
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package, "--trusted-host", "pypi.org", "--trusted-host", "files.pythonhosted.org"])
+
+
 
 max = int(input("Enter the maximum value of i: "))+1
 
 
 
 def hi(max):
+
+    from tqdm import tqdm
+
+    import matplotlib.pyplot as plt
     sum1_list = []
     sum2_list = []
     intersection_point = None
@@ -39,5 +48,12 @@ def hi(max):
     plt.show()
     return intersection_point
 
-
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    print("Required packages not found. Installing...")
+    install('matplotlib')
+    install('tqdm')
+    import matplotlib.pyplot as plt
+    import tqdm
 hi(max)
