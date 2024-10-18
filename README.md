@@ -1,3 +1,5 @@
+
+![Nicol](./nicol.png)
 > [!WARNING]
 > Urgent: You must be (or know) a dunce to read this.
 
