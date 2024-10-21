@@ -1,3 +1,8 @@
+import subprocess, sys
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package, "--trusted-host", "pypi.org", "--trusted-host", "files.pythonhosted.org"])
+install("matplotlib")
+
 import tkinter as tk
 from tkinter import ttk
 import numpy as np
