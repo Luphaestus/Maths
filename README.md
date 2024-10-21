@@ -7,7 +7,7 @@
 
 ## Overview
 
-**Dunce's Theorem** is a humorous and fictional mathematical theorem that explores the impact of a student wearing a dunce cap on the average intelligence of a classroom. It suggests that the presence of a dunce cap not only affects individual performance but also has a disproportionately large effect on the perceived intelligence of the entire group, especially in larger classrooms.
+**Dunce's Theorem** is a complicated mathematical theorem that explores the impact of a student wearing a dunce cap on the average intelligence of a classroom. It suggests that the presence of a dunce cap not only affects individual performance but also has a disproportionately large effect on the perceived intelligence of the entire group, especially in larger classrooms.
 
 ## Theorem Statement
 
