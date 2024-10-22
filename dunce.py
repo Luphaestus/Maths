@@ -2,12 +2,14 @@ import subprocess, sys
 def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package, "--trusted-host", "pypi.org", "--trusted-host", "files.pythonhosted.org"])
 install("matplotlib")
+install("pillow")
 
 import tkinter as tk
 from tkinter import ttk
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from PIL import Image, ImageTk
 
 # Function to compute the recalibrated mean cognitive capacity
 def calculate_average_intelligence(I, D, n, r, density, material_height):
@@ -77,6 +79,10 @@ def update_plot(*args):
         # Add grid lines along the y-axis for better readability
         ax.grid(axis='y')
         
+        # Load and display the image at the bottom of the plot
+        # Load the image using PIL
+      
+        
         # Redraw the canvas to reflect the updated plot
         canvas.draw()
     except ValueError:
@@ -119,6 +125,16 @@ ttk.Label(root, text="Dunce Hat Material Height").pack()
 fig, ax = plt.subplots()
 canvas = FigureCanvasTkAgg(fig, master=root)
 canvas.get_tk_widget().pack()
+
+img = Image.open('./dunce.png')  # Ensure the path is correct
+img = img.resize((400, 300))  # Resize the image to fit the Tkinter window
+img_tk = ImageTk.PhotoImage(img)
+
+# Create a label to display the image
+img_label = tk.Label(root, image=img_tk)
+img_label.image = img_tk  # Keep a reference to avoid garbage collection
+img_label.pack(pady=10)
+
 
 # Initial plot to display the default state of the model
 update_plot()
